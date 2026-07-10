@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: laylalabs-layla
+category: finance
+name: LAYLA
+version: "1.0.0"
+tagline: Elite Solana wallet tracker & signal bot
+icon: https://raw.githubusercontent.com/coynebit/umbrel-apps-laylalabs/master/laylalabs-layla/icon.svg
+description: >-
+  LAYLA tracks a curated set of high-performing Solana wallets in real time,
+  surfaces buy/sell signals as they happen, and layers in adaptive learning,
+  rug/safety scoring, crowdedness detection, and Telegram alerts. Includes
+  the V8 signal bot for independent narrative-based token discovery.
+developer: Coyne
+website: ""
+submitter: Coyne
+submission: https://github.com/coynebit/umbrel-apps-laylalabs
+repo: https://github.com/coynebit/umbrel-apps-laylalabs
+support: ""
+port: 8082
+gallery: []
+releaseNotes: "Initial release."
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+deterministicPassword: false
+torOnly: false
