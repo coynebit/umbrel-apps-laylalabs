@@ -1,0 +1,27 @@
+services:
+  elite-wallet-tracker:
+    build: /home/umbrel/Documents/solbot
+    container_name: elite-wallet-tracker
+    working_dir: /app
+    volumes:
+      - /home/umbrel/Documents/solbot:/app
+      - /home/umbrel/Documents/TG:/mnt/layla_logs:ro
+    network_mode: host
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GMGN_API_KEY=gmgn_2c5d27efdbab8a47ad80f0c47aef1f6a
+    command: sh -c "pip install --no-cache-dir -r requirements.txt && python3 main.py"
+    restart: on-failure
+  layla-signal-v8:
+    image: python:3.13-slim
+    container_name: layla-signal-v8
+    working_dir: /app
+    volumes:
+      - /home/umbrel/Documents/solbot:/app
+      - /home/umbrel/Documents/TG:/root/Documents/TG
+    network_mode: host
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LAYLA_TELEGRAM_TOKEN=8975230029:AAG36GPXGnDSelaALTT1LEbUmyRU62n38cA
+    command: sh -c "pip install --no-cache-dir -r requirements.txt && python3 sol_buy_signal_bot_v8.py"
+    restart: on-failure
